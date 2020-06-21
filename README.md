@@ -10,9 +10,11 @@
 
 ## 実行方法
 コードの取得
-`go get github.com/takahiko-tanaka-10antz/behaviortree`
+
+`go get -u github.com/takahiko-tanaka-10antz/behaviortree`
 
 実行ファイルは main.go になります。
+
  `$go run main.go`
 
 main.goの12行目でSkillAの発動確率を入力しています。（初期値50%）
