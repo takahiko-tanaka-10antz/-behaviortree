@@ -2,6 +2,7 @@ package scenario
 
 import (
 	"fmt"
+
 	. "github.com/takahiko-tanaka-10antz/behaviortree/behaviortree"
 )
 

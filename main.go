@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	. "github.com/takahiko-tanaka-10antz/behaviortree/behaviortree"
 	"github.com/takahiko-tanaka-10antz/behaviortree/models/logic"
 	"github.com/takahiko-tanaka-10antz/behaviortree/scenario"
@@ -10,6 +11,7 @@ import (
 func main() {
 	input := 0.5 // SkillAの発動確率(50%)
 
+	// 各Logicのインスタンスを作成
 	user := logic.NewUserLogic(150, input, 1.0)
 	enemy := logic.NewEnemyLogic(120)
 

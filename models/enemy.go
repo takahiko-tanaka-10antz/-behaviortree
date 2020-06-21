@@ -1,5 +1,6 @@
 package models
 
+// 敵の構造体
 type Enemy struct {
 	HP int
 }

@@ -4,6 +4,7 @@ import (
 	"errors"
 )
 
+// 全てのノードの親
 func RootNode(node Node) error {
 	tick, children := node()
 	if tick == nil {

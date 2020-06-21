@@ -1,39 +1,39 @@
 package behaviortree
 
+// 並列実行した子供が全て成功したらSuccessを返す
 func ParallelNode(children []Node) (Status, error) {
-	s := make(chan Status, len(children))
-	e := make(chan error, len(children))
-	done := make(chan struct{})
+	status := make(chan Status, len(children))
+	err := make(chan error, len(children))
+	done := make(chan interface{})
 
-	go func(children []Node, s chan<- Status, e chan<- error) {
-		for _, c := range children {
-			status, err := c.Tick()
-			if err != nil {
-				e <- err
-				s <- Failure
-			}
-
-			if status == Failure {
-				e <- nil
-				s <- Failure
-			}
-
-			e <- nil
-			s <- Success
+	// SequencerNodeを並列に実行する
+	go func() {
+		s, e := SequencerNode(children)
+		if e != nil {
+			err <- e
+			status <- Failure
 		}
 
-		close(s)
-		close(e)
+		if s == Failure {
+			err <- nil
+			status <- Failure
+		}
+
+		err <- nil
+		status <- Success
+
+		close(status)
+		close(err)
 		close(done)
-	}(children, s, e)
+	}()
 
 	for {
 		select {
-		case err := <-e:
+		case err := <-err:
 			if err != nil {
 				return Failure, err
 			}
-		case status := <-s:
+		case status := <-status:
 			if status == Failure {
 				return Failure, nil
 			}

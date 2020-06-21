@@ -4,6 +4,8 @@ import (
 	"errors"
 )
 
+// TreeのBranchとNodeを作成する
+
 const (
 	Success Status = 2
 	Failure Status = 3

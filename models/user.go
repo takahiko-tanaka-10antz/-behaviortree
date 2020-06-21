@@ -1,5 +1,6 @@
 package models
 
+// プレイするユーザーの構造体
 type User struct {
 	HP     int
 	SkillA SkillA

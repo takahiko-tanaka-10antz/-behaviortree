@@ -1,5 +1,6 @@
 package behaviortree
 
+// childrenの処理がFailureである限り処理し続ける
 func SelectorNode(children []Node) (Status, error) {
 	for _, c := range children {
 		status, err := c.Tick()

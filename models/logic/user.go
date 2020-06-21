@@ -2,10 +2,11 @@ package logic
 
 import (
 	"fmt"
-	. "github.com/takahiko-tanaka-10antz/behaviortree/behaviortree"
-	"github.com/takahiko-tanaka-10antz/behaviortree/models"
 	"math/rand"
 	"time"
+
+	. "github.com/takahiko-tanaka-10antz/behaviortree/behaviortree"
+	"github.com/takahiko-tanaka-10antz/behaviortree/models"
 )
 
 type UserLogic struct {
