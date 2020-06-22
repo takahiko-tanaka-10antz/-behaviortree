@@ -47,13 +47,13 @@ func main() {
 					SelectorNode,
 					NewBranch(
 						ConditionNode,
-						user.GetSkills("A"),
-						user.ActivateSkills(&enemy.Enemy, "A"),
+						user.GetSkills("1"),
+						user.ActivateSkills(&enemy.Enemy, "1"),
 					),
 					NewBranch(
 						ConditionNode,
-						user.GetSkills("B"),
-						user.ActivateSkills(&enemy.Enemy, "B"),
+						user.GetSkills("2"),
+						user.ActivateSkills(&enemy.Enemy, "2"),
 					),
 				),
 			),

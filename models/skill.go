@@ -1,26 +1,26 @@
 package models
 
 // スキルAの構造体
-type SkillA struct {
+type Skill1 struct {
 	Rate   float64
 	Damage int
 }
 
 // スキルBの構造体
-type SkillB struct {
+type Skill2 struct {
 	Rate   float64
 	Damage int
 }
 
-func NewSkillA(r float64, d int) *SkillA {
-	return &SkillA{
+func NewSkill1(r float64, d int) *Skill1 {
+	return &Skill1{
 		Rate:   r,
 		Damage: d,
 	}
 }
 
-func NewSkillB(r float64, d int) *SkillB {
-	return &SkillB{
+func NewSkill2(r float64, d int) *Skill2 {
+	return &Skill2{
 		Rate:   r,
 		Damage: d,
 	}

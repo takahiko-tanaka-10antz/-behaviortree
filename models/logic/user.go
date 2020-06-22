@@ -52,10 +52,10 @@ func (u *UserLogic) ActivateSkills(e *models.Enemy, typ string) Node {
 	return NewBranch(
 		func(children []Node) (Status, error) {
 			switch typ {
-			case "A":
-				e.HP -= u.User.SkillA.Damage
-			case "B":
-				e.HP -= u.User.SkillB.Damage
+			case "1":
+				e.HP -= u.User.Skill1.Damage
+			case "2":
+				e.HP -= u.User.Skill2.Damage
 			}
 
 			fmt.Printf("スキル%s発動\n", typ)
@@ -72,10 +72,10 @@ func (u *UserLogic) GetSkills(typ string) Node {
 
 			var sr float64
 			switch typ {
-			case "A":
-				sr = u.User.SkillA.Rate
-			case "B":
-				sr = u.User.SkillB.Rate
+			case "1":
+				sr = u.User.Skill1.Rate
+			case "2":
+				sr = u.User.Skill2.Rate
 			}
 
 			if r > sr {
