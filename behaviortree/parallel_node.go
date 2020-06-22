@@ -13,7 +13,6 @@ func ParallelNode(children []Node) (Status, error) {
 			err <- e
 			status <- Failure
 		}
-
 		if s == Failure {
 			err <- nil
 			status <- Failure

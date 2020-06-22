@@ -25,6 +25,7 @@ func (u *UserLogic) IsHP100OrMore() Node {
 			if u.User.HP >= 100 {
 				return Success, nil
 			}
+
 			return Failure, nil
 		},
 	)
@@ -34,6 +35,7 @@ func (u *UserLogic) GetCloser() Node {
 	return NewBranch(
 		func(children []Node) (Status, error) {
 			fmt.Println("敵に寄る")
+
 			return Success, nil
 		},
 	)
