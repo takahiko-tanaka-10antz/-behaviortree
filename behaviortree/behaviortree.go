@@ -7,8 +7,8 @@ import (
 // TreeのBranchとNodeを作成する
 
 const (
-	Success Status = 2
-	Failure Status = 3
+	Success Status = 0
+	Failure Status = 1
 )
 
 type (
