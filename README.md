@@ -77,8 +77,8 @@ End2
 ```
 
 ## 参考
-[go-behaviortree](https://github.com/joeycumines/go-behaviortree)
-
 [Behavior tree (artificial intelligence, robotics and control)](https://en.wikipedia.org/wiki/Behavior_tree_(artificial_intelligence,_robotics_and_control))
+
+[go-behaviortree](https://github.com/joeycumines/go-behaviortree)
 
 #10antz
