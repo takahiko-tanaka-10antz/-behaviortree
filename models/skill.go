@@ -1,12 +1,12 @@
 package models
 
-// スキルAの構造体
+// スキル1の構造体
 type Skill1 struct {
 	Rate   float64
 	Damage int
 }
 
-// スキルBの構造体
+// スキル2の構造体
 type Skill2 struct {
 	Rate   float64
 	Damage int
