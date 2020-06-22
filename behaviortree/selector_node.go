@@ -11,5 +11,6 @@ func SelectorNode(children []Node) (Status, error) {
 			return Success, nil
 		}
 	}
+
 	return Failure, nil
 }

@@ -65,14 +65,14 @@ func main() {
 				NewBranch(
 					ConditionNode,
 					enemy.Dead(),
-					scenario.END1(),
+					scenario.End(&enemy.Enemy),
 				),
 
 				// 敵が生きたら、End2
 				NewBranch(
 					ConditionNode,
 					enemy.Alive(),
-					scenario.END2(),
+					scenario.End(&enemy.Enemy),
 				),
 			),
 		),

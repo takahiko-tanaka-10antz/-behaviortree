@@ -12,5 +12,6 @@ func ActionNode(children []Node) (Status, error) {
 	if err != nil {
 		return Failure, err
 	}
+
 	return status, nil
 }

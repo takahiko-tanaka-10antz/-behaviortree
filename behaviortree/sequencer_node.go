@@ -11,5 +11,6 @@ func SequencerNode(children []Node) (Status, error) {
 			return Failure, nil
 		}
 	}
+
 	return Success, nil
 }

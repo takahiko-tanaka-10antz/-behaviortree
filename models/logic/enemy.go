@@ -21,6 +21,7 @@ func (e *EnemyLogic) Dead() Node {
 			if e.Enemy.HP <= 0 {
 				return Success, nil
 			}
+
 			return Failure, nil
 		},
 	)
@@ -32,6 +33,7 @@ func (e *EnemyLogic) Alive() Node {
 			if e.Enemy.HP >= 0 {
 				return Success, nil
 			}
+
 			return Failure, nil
 		},
 	)

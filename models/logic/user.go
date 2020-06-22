@@ -43,6 +43,7 @@ func (u *UserLogic) CallAFriends(f string) Node {
 	return NewBranch(
 		func(children []Node) (Status, error) {
 			fmt.Printf("フレンド%sを呼ぶ\n", f)
+
 			return Success, nil
 		},
 	)
@@ -59,6 +60,7 @@ func (u *UserLogic) ActivateSkills(e *models.Enemy, typ string) Node {
 			}
 
 			fmt.Printf("スキル%s発動\n", typ)
+
 			return Success, nil
 		},
 	)
@@ -81,6 +83,7 @@ func (u *UserLogic) GetSkills(typ string) Node {
 			if r > sr {
 				return Failure, nil
 			}
+
 			return Success, nil
 		},
 	)

@@ -15,5 +15,6 @@ func RootNode(node Node) error {
 	if err == nil && status == Failure {
 		return errors.New("behaviortree.RootNode :: If it fails, end the process")
 	}
+
 	return nil
 }

@@ -17,6 +17,7 @@ func RepeaterNode(cnt int, node Node) Node {
 					return Failure, nil
 				}
 			}
+
 			return Success, nil
 		},
 	)
