@@ -10,12 +10,16 @@
 
 ## 実行方法
 コードの取得
-`go get github.com/takahiko-tanaka-10antz/behaviortree`
+
+`go get -u github.com/takahiko-tanaka-10antz/behaviortree`
 
 実行ファイルは main.go になります。
+
  `$go run main.go`
 
 main.goの12行目でSkill1の発動確率を入力しています。（初期値50%）
+
+https://github.com/takahiko-tanaka-10antz/behaviortree/blob/0047b9b6ad5c92eaaa9a86a6a7236fe6c820f62e/main.go#L12
 
 ## 出力例
 END1（敵が死ぬ）
