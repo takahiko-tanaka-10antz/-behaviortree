@@ -31,6 +31,7 @@ func (n Node) Tick() (Status, error) {
 	if n == nil {
 		return Failure, errors.New("behaviortree.Tick :: cannot tick a nil node")
 	}
+
 	tick, children := n()
 	if tick == nil {
 		return Failure, errors.New("behaviortree.Tick :: cannot tick a node with a nil tick")
