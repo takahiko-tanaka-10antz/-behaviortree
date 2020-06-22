@@ -28,16 +28,16 @@ func ParallelNode(children []Node) (Status, error) {
 
 	for {
 		select {
-		case err := <-err:
-			if err != nil {
-				return Failure, err
-			}
 		case status := <-status:
 			if status == Failure {
 				return Failure, nil
 			}
 		case <-done:
 			return Success, nil
+		case err := <-err:
+			if err != nil {
+				return Failure, err
+			}
 		}
 	}
 }
